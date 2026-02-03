@@ -58,11 +58,15 @@ $$\sigma(z) = \begin{cases}
 $$\mathcal{L} = -\frac{1}{m} \sum_{i=1}^{m} \left[ y_i \log(p_i) + (1-y_i) \log(1-p_i) \right]$$
 
 ### **Gradient Descent Update**
-$$w := w - \alpha \cdot \frac{\partial \mathcal{L}}{\partial w} + \text{ridge\_gradient}(\alpha, w)$$
-$$b := b - \alpha \cdot \frac{\partial \mathcal{L}}{\partial b}$$
-
+```math
+w := w - \alpha \cdot \frac{\partial \mathcal{L}}{\partial w} + \text{ridge\_gradient}(\alpha, w)
+```
+```math
+b := b - \alpha \cdot \frac{\partial \mathcal{L}}{\partial b}
+```
 ### **L2 Regularization Penalty**
-$$\text{ridge\_gradient} = \frac{\alpha \cdot w}{n}$$
+(\text{ridge_gradient} = \frac{\alpha \cdot w}{n})
+
 
 ### **ReduceLROnPlateau**
 - Monitors accuracy every 5 epochs
